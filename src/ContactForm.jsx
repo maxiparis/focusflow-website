@@ -25,7 +25,7 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Example: Send form data to your backend API
+    // Example: Send form data to backend API
     fetch('https://your-backend-api/contact', {
       method: 'POST',
       headers: {
