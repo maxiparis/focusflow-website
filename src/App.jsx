@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import './App.css';
+import ContactForm from './ContactForm'; // Import the ContactForm component
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="App">
+      {/* Container to center the content */}
+      <div className="container">
+        {/* Company Name and Logo */}
+        <header className="header">
+          <img src="/path-to-logo.png" alt="FocusFlow Logo" className="logo" />
+          <h1>FocusFlow</h1>
+        </header>
+
+        {/* Description */}
+        <section className="about">
+          <h2>About FocusFlow</h2>
+          <p>
+            FocusFlow is a productivity tool designed to help individuals and teams manage their tasks
+            and stay focused. Whether you're working on a solo project or collaborating with a team,
+            FocusFlow provides you with the tools you need to optimize your workflow.
+          </p>
+        </section>
+
+        {/* Contact Form Component */}
+        <section className="contact">
+          <h2>Contact Us</h2>
+          <ContactForm /> {/* This is where contact form will be rendered */}
+        </section>
+
+        {/* Link to Survey */}
+        <footer className="footer">
+          <p>
+            Participate in our survey: <a href="https://link-to-your-survey.com" target="_blank" rel="noopener noreferrer">Click here</a>
+          </p>
+        </footer>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
