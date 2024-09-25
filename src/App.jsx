@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import ContactForm from './ContactForm';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import Hero from './components/Hero.jsx';
+import Features from "./components/Features.jsx";
 
 function App() {
   return (
@@ -10,15 +10,10 @@ function App() {
       {/* Container to center the content */}
       <div className="container">
         {/* Company Name and Logo */}
-        <header className="header">
-          <img src="/path-to-logo.png" alt="FocusFlow Logo" className="logo" />
-          <h1>FocusFlow</h1>
-        </header>
-
-        <section>
+          {/*<img src="/path-to-logo.png" alt="FocusFlow Logo" className="logo" />*/}
           <Hero />
-        </section>
 
+          <Features />
         {/* Description */}
         <section className="about">
           <h2>About FocusFlow</h2>
