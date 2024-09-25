@@ -12,9 +12,18 @@ function App() {
       <div className="container">
         {/* Company Name and Logo */}
           {/*<img src="/path-to-logo.png" alt="FocusFlow Logo" className="logo" />*/}
-          <Hero />
-          <Features />
-          <ContactForm2 />
+          <section>
+            <Hero />
+          </section>
+
+          <section>
+            <Features />
+          </section>
+
+          <section>
+            <ContactForm2 />
+          </section>
+
       </div>
     </div>
   );
