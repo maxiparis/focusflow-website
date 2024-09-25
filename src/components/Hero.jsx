@@ -11,8 +11,7 @@ function Hero() {
                     {/*TOOD: insert link to survey*/}
                     <a href="https://our-survey.com" target="_blank" rel="noopener noreferrer">
                         <Button variant="primary" size="lg" >
-                            <i className="bi bi-pencil"></i>
-                            Participate in our survey
+                            <i className="bi bi-pencil"></i> Participate in our survey
                         </Button>
                     </a>
                 {/*</Col>*/}
