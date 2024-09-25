@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import ContactForm from './ContactForm'; // Import the ContactForm component
-
+import Hero from './components/Hero.jsx';
 function App() {
   return (
     <div className="App">
@@ -12,6 +12,10 @@ function App() {
           <img src="/path-to-logo.png" alt="FocusFlow Logo" className="logo" />
           <h1>FocusFlow</h1>
         </header>
+
+        <section>
+          <Hero />
+        </section>
 
         {/* Description */}
         <section className="about">
