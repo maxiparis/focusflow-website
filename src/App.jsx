@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
-import ContactForm from './ContactForm'; // Import the ContactForm component
+import ContactForm from './ContactForm';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Hero from './components/Hero.jsx';
+
 function App() {
   return (
     <div className="App">
