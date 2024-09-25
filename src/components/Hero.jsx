@@ -8,10 +8,10 @@ function Hero() {
                     <h1 className={"display-1"}>FocusFlow</h1>
                     <h1 className={"display-4 p-3"}>Boost Your Productivity with Our App</h1>
 
-                    <p>Manage your tasks, set goals, and track your progress with ease.</p>
                     {/*TOOD: insert link to survey*/}
                     <a href="https://our-survey.com" target="_blank" rel="noopener noreferrer">
                         <Button variant="primary" size="lg" >
+                            <i className="bi bi-pencil"></i>
                             Participate in our survey
                         </Button>
                     </a>
