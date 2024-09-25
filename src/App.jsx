@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import ContactForm from './ContactForm';
 import Hero from './components/Hero.jsx';
 import Features from "./components/Features.jsx";
 import ContactForm2 from './components/ContactForm2.jsx';
