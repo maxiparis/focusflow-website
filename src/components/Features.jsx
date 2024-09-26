@@ -12,7 +12,7 @@ function Features() {
 
     return (
         <Container className="py-5">
-            <h2 className="text-center mb-4">App Features</h2>
+            <h2 className="text-center mb-4">How will this app help you master your time?</h2>
             <Row>
                 {featureList.map((feature, idx) => (
                     <Col md={4} key={idx}>

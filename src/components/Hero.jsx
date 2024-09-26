@@ -9,7 +9,7 @@ function Hero() {
                     <h1 className={"display-4 p-3"}>Boost Your Productivity with Our App</h1>
 
                     {/*TOOD: insert link to survey*/}
-                    <Button variant="success" size="lg" href="https://our-survey.com" >
+                    <Button variant="success" size="lg" href="https://forms.gle/ukWuVMNYGxAmk3Uk7" >
                         <i className="bi bi-pencil"></i> Participate in our survey
                     </Button>
                 {/*</Col>*/}
