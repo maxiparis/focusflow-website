@@ -5,7 +5,12 @@ function Hero() {
         <Container className="hero-section" style={{ padding: '50px 0', textAlign: 'center', backgroundColor: '#f5f5f5' }}>
             <Row>
                 <Col md={6} className="align-self-center mb-4 mb-md-0">
-                    <h1 className={"display-1"}>FocusFlow</h1>
+                    <Image
+                        src="logoSemiRounded.png"
+                        alt="FocusFlow Logo"
+                        style={{ width: '100px', height: 'auto', marginRight: '10px' }}
+                    />
+                    <h1 className="display-1">FocusFlow</h1>
                     <h1 className={"display-4 p-3"}>Boost Your Productivity with Our App</h1>
 
                     <Button variant="success" size="lg" href="https://forms.gle/ukWuVMNYGxAmk3Uk7" >
@@ -14,7 +19,7 @@ function Hero() {
                 </Col>
                 <Col md={6}>
                     <Image
-                        src="public/demo-removebg.png"
+                        src="demo-removebg.png"
                         alt="App Screenshot"
                         style={{ width: '350px', height: 'auto'}}
                         fluid
