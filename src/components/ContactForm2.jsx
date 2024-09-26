@@ -48,7 +48,7 @@ function ContactForm() {
                     <Form.Control
                         type="text"
                         placeholder="Enter your name"
-                        name="name"
+                        name="from_name"
                         value={formData.from_name}
                         onChange={handleChange}
                         required
