@@ -14,7 +14,7 @@ function Hero() {
                 </Col>
                 <Col md={6}>
                     <Image
-                        src="public/demo.jpg"
+                        src="public/demo-removebg.png"
                         alt="App Screenshot"
                         style={{ width: '350px', height: 'auto'}}
                         fluid
