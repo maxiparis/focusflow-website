@@ -1,37 +1,55 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import React, { useState, useRef } from 'react';
+import emailjs from 'emailjs-com';
+import { Container, Form, Button } from 'react-bootstrap';
 
 function ContactForm() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: '',
-    });
+  const [formData, setFormData] = useState({
+    from_name: '',
+    email: '',
+    message: '',
+  });
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
+  const form = useRef();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic here (e.g., sending the data to an API)
-        console.log('Form submitted:', formData);
-        // Clear form after submission
-        setFormData({ name: '', email: '', message: '' });
+
+        emailjs.sendForm(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            form.current,
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+            .then(
+                (result) => {
+                    console.log('Success:', result.text);
+                    alert('Message sent successfully!');
+                    // Clear form after submission
+                    setFormData({ name: '', email: '', message: '' });
+                },
+                (error) => {
+                    console.log('Error:', error.text);
+                    alert('Failed to send the message, please try again.');
+                }
+            );
     };
 
     return (
         <Container className="py-5" style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <h2 className="text-left mb-4">Contact Us</h2>
-            <Form onSubmit={handleSubmit}>
+            <h2 className="text-left mb-4">We want to hear you!</h2>
+            <Form ref={form} onSubmit={handleSubmit}>
                 <Form.Group controlId="formName" className="text-start">
                     <Form.Label>Name</Form.Label>
                     <Form.Control
                         type="text"
                         placeholder="Enter your name"
-                        name="name"
-                        value={formData.name}
+                        name="from_name"
+                        value={formData.from_name}
                         onChange={handleChange}
                         required
                     />
@@ -54,7 +72,7 @@ function ContactForm() {
                     <Form.Control
                         as="textarea"
                         rows={3}
-                        placeholder="Enter your message"
+                        placeholder="What do you think of the idea? Please let us know!"
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
