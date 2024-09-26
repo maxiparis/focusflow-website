@@ -41,7 +41,7 @@ function ContactForm() {
 
     return (
         <Container className="py-5" style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <h2 className="text-left mb-4">Contact Us</h2>
+            <h2 className="text-left mb-4">We want to hear you!</h2>
             <Form ref={form} onSubmit={handleSubmit}>
                 <Form.Group controlId="formName" className="text-start">
                     <Form.Label>Name</Form.Label>
@@ -72,7 +72,7 @@ function ContactForm() {
                     <Form.Control
                         as="textarea"
                         rows={3}
-                        placeholder="Enter your message"
+                        placeholder="What do you think of the idea? Please let us know!"
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
