@@ -82,9 +82,11 @@ function ContactForm() {
                             />
                         </Form.Group>
 
-                        <Button variant="primary" type="submit" className="mt-3">
-                            Submit
-                        </Button>
+                        <div>
+                            <Button variant="primary" type="submit" className="mt-3 submit-button">
+                                Submit
+                            </Button>
+                        </div>
                     </Form>
                 </CardBody>
 
