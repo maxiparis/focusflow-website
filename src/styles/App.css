@@ -110,6 +110,17 @@ section {
   height: 100%; /* Scale the iframe to match the height of the container */
 }
 
+.custom-logo {
+  width: 100px;
+  height: auto;
+}
+
+@media (max-width: 576px) {
+  .custom-logo {
+    width: 60px; /* Adjust for mobile */
+  }
+}
+
 
 /* Responsive Design */
 @media (max-width: 600px) {

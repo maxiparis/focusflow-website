@@ -15,9 +15,10 @@ function Hero() {
             <Row className={"w-100 d-flex align-items-center"}>
                 <Col md={6} className="align-self-center mb-4 mb-md-0">
                     <Image
+                        className="custom-logo"
                         src="logoSemiRounded.png"
                         alt="FocusFlow Logo"
-                        style={{width: '100px', height: 'auto', marginRight: '10px'}}
+                        style={{maxWidth: '80px', height: 'auto'}}
                     />
                     <h1 className="display-1">FocusFlow</h1>
                     <h1 className={"display-4 p-3"}>Boost Your Productivity with Our App</h1>
