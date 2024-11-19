@@ -11,14 +11,30 @@ function Features() {
     ];
 
     return (
-        <Container className="py-5">
+        <div className={"my-3 d-flex flex-column align-items-center"}>
+
+            <h2 className="mt-5 mb-3">Demo in Spanish</h2>
+            <div className="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/8m7kbKdoQfI?si=e-rXuFKKBWMhZPLc"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen>
+                </iframe>
+            </div>
+
+
+            <h4 className="my-5 text-secondary">Demo in English - coming soon</h4>
+
             <h2 className="text-center mb-4">How will this app help you master your time?</h2>
-            <Row>
+            <Row className={"w-100"}>
                 {featureList.map((feature, idx) => (
                     <Col md={4} key={idx}>
-                        <Card className="text-center mb-4" style={{ border: 'none', backgroundColor: 'transparent' }}>
+                        <Card className="text-center mb-4" style={{border: 'none', backgroundColor: 'transparent'}}>
                             <Card.Body>
-                                <div className="mb-3" style={{ fontSize: '40px', color: '#007bff' }}>
+                                <div className="mb-3" style={{fontSize: '40px', color: '#007bff'}}>
                                     <i className={feature.icon}></i> {/* Display the icon */}
                                 </div>
                                 <Card.Title>{feature.title}</Card.Title>
@@ -28,7 +44,7 @@ function Features() {
                     </Col>
                 ))}
             </Row>
-        </Container>
+        </div>
     );
 }
 
