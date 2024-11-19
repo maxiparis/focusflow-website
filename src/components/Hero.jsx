@@ -2,8 +2,12 @@ import { Container, Button, Row, Col, Image } from 'react-bootstrap';
 
 function Hero() {
 
-    const handleButtonClick = () => {
-        window.open("https://forms.gle/ukWuVMNYGxAmk3Uk7", "_blank");
+    const handleButtonClickEnglish = () => {
+        window.open("https://forms.gle/5Zp8tvTjPUwXPWEJ7", "_blank");
+    };
+
+    const handleButtonClickSpanish = () => {
+        window.open("https://forms.gle/VnpSREAQLfpVFzXD7", "_blank");
     };
 
     return (
@@ -20,7 +24,7 @@ function Hero() {
 
                     <Row className="mb-3">
                         <Col>
-                            <Button variant="success" size="md-lg" onClick={handleButtonClick}>
+                            <Button variant="success" size="md-lg" onClick={handleButtonClickEnglish}>
                                 <i className="bi bi-pencil"></i> Participate in our survey! (English)
                             </Button>
                         </Col>
@@ -28,7 +32,7 @@ function Hero() {
 
                     <Row className="mb-3">
                         <Col>
-                            <Button variant="primary" size="md-lg" onClick={handleButtonClick}>
+                            <Button variant="primary" size="md-lg" onClick={handleButtonClickSpanish}>
                                 <i className="bi bi-pencil"></i> Participa en nuestra encuesta! (Spanish)
                             </Button>
 
