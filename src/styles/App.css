@@ -94,6 +94,23 @@ section {
   text-decoration: underline;
 }
 
+.video-container {
+  position: relative; /* To allow the iframe to be absolutely positioned */
+  width: 100%; /* Let the video take up the full width of its parent */
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 = 0.5625) */
+  height: 0; /* Necessary for the padding trick to work */
+  overflow: hidden; /* Ensure content stays within the container */
+}
+
+.video-container iframe {
+  position: absolute; /* Positioned relative to the container */
+  top: 0;
+  left: 0;
+  width: 100%; /* Scale the iframe to match the width of the container */
+  height: 100%; /* Scale the iframe to match the height of the container */
+}
+
+
 /* Responsive Design */
 @media (max-width: 600px) {
   /*.container {*/
