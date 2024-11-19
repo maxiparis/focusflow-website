@@ -16,7 +16,6 @@ function App() {
             <Features />
             <ContactForm2 />
             <OurFooter />
-
       </div>
     </div>
   );
