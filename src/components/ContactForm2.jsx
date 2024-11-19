@@ -45,7 +45,7 @@ function ContactForm() {
                 <CardBody>
                     <h2 className="text-left mb-4">We want to hear you!</h2>
                     <Form ref={form} onSubmit={handleSubmit}>
-                        <Form.Group controlId="formName" className="text-start">
+                        <Form.Group controlId="formName" className="text-start mb-3">
                             <Form.Label>Name</Form.Label>
                             <Form.Control
                                 type="text"
@@ -57,7 +57,7 @@ function ContactForm() {
                             />
                         </Form.Group>
 
-                        <Form.Group controlId="formEmail" className="text-start">
+                        <Form.Group controlId="formEmail" className="text-start mb-3">
                             <Form.Label>Email</Form.Label>
                             <Form.Control
                                 type="email"
