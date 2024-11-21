@@ -11,7 +11,7 @@ function Features() {
     ];
 
     return (
-        <div className={"my-3 d-flex flex-column align-items-center"}>
+        <div id='demo' className={"my-3 d-flex flex-column align-items-center"}>
 
             <h1>How does it work? ⬇️</h1>
             <h2 className="mt-5 mb-3">Demo in English</h2>
@@ -35,7 +35,7 @@ function Features() {
                 </iframe>
             </div>
 
-            <h2 className="text-center my-4">How will this app help you master your time?</h2>
+            <h2 id='features' className="text-center my-4">How will this app help you master your time?</h2>
             <Row className={"w-100"}>
                 {featureList.map((feature, idx) => (
                     <Col md={4} key={idx}>
