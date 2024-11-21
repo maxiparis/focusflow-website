@@ -1,8 +1,18 @@
+:root {
+  --dark-gray: #303841;
+  --slate-gray: #3A4750;
+  --cyan: #00ADB5;
+  --light-gray: #EEEEEE;
+}
+
 /* Reset some basic styles for consistency across browsers */
 html, body {
   max-width: 100vw;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 *:not(.navbar, .navbar *) {
@@ -19,17 +29,94 @@ html, body {
   max-width: 100vw;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f2f5;
+  background-color: var(--light-gray);
   min-height: 100vh;
   /* display: flex;
   justify-content: center;
   align-items: center; */
-  padding: 56px;
+  padding-top: 70px;
 }
 
 .container {
   background-color: #ffffff;
   padding: 40px;
+}
+
+.navbar {
+  background-color: var(--dark-gray);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar .nav-link {
+  color: var(--light-gray);
+}
+
+.navbar .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover {
+  color: var(--cyan);
+}
+
+.navbar .btn-primary {
+  background-color: var(--cyan);
+  border-color: var(--cyan);
+}
+
+.navbar .btn-primary:hover {
+  background-color: #019ca1; /* Slightly darker cyan */
+  border-color: #019ca1;
+}
+
+/* Adjust Nav Links Styling */
+.navbar-brand span {
+  font-size: 1.25rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+/* Remove previous hover color */
+.navbar-nav .nav-link:hover {
+  color: var(--cyan);
+}
+
+.btn-primary {
+  background-color: var(--cyan);
+  border-color: var(--cyan);
+}
+
+.btn-primary:hover {
+  background-color: #019ca1;
+  border-color: #019ca1;
+}
+
+.btn-secondary {
+  background-color: var(--dark-gray);
+  border-color: var(--dark-gray);
+  color: var(--light-gray);
+}
+
+.btn-secondary:hover {
+  background-color: #262c33;
+  border-color: #262c33;
+}
+
+.footer a {
+  color: var(--cyan);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #019ca1;
 }
 
 :target::before {
@@ -40,7 +127,6 @@ html, body {
 }
 
 .container-fluid {
-  background-color: #ffffff;
   padding: 10px;
 }
 
@@ -128,32 +214,6 @@ section {
     width: 60px; /* Adjust for mobile */
   }
 }
-
-.navbar-brand span {
-  font-size: 1.25rem;
-}
-
-/* Adjust Nav Links Styling */
-.navbar-nav .nav-link {
-  font-size: 1rem;
-  margin-right: 1rem;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #0056b3; /* Darker blue on hover */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 576px) {
-  .navbar-brand span {
-    font-size: 1rem;
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 0.9rem;
-  }
-}
-
 
 /* Responsive Design */
 @media (max-width: 600px) {

@@ -1,3 +1,4 @@
+// Navbar.jsx
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -8,7 +9,8 @@ function Navbar() {
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
+      {/* Changed to navbar-dark for dark background */}
       <div className="container-fluid">
         {/* Logo and Brand Name */}
         <a className="navbar-brand d-flex align-items-center" href="#home">
@@ -18,32 +20,32 @@ function Navbar() {
             width="30"
             height="30"
             className="d-inline-block align-top me-2"
-          />{' '}
-          FocusFlow
+          />
+          <span className="fw-bold">FocusFlow</span>
         </a>
         {/* Toggle Button for Mobile View */}
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          onClick={handleNavCollapse}
           aria-controls="navbarNav"
           aria-expanded={!isNavCollapsed}
           aria-label="Toggle navigation"
-          onClick={handleNavCollapse}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
         {/* Navbar Links */}
-        <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            {/* Use ms-auto to align items to the right */}
+        <div
+          className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}
+          id="navbarNav"
+        >
+          <ul className="navbar-nav ms-auto align-items-lg-center">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a className="nav-link" href="#home">
                 Home
               </a>
             </li>
-            {/* Add more nav items as needed */}
+            {/* Other nav items */}
             <li className="nav-item">
               <a className="nav-link" href="#features">
                 Features
@@ -59,7 +61,12 @@ function Navbar() {
                 Contact Us
               </a>
             </li>
-            {/* Optional: Language Switcher or other items */}
+            {/* CTA Button */}
+            <li className="nav-item ms-lg-3">
+              <a className="btn btn-primary" href="#get-started">
+                Get Started
+              </a>
+            </li>
           </ul>
         </div>
       </div>
