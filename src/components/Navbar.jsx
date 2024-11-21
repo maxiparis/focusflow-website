@@ -47,13 +47,13 @@ function Navbar() {
             </li>
             {/* Other nav items */}
             <li className="nav-item">
-              <a className="nav-link" href="#features">
-                Features
+              <a className="nav-link" href="#demo">
+                Demo
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#demo">
-                Demo
+              <a className="nav-link" href="#features">
+                Features
               </a>
             </li>
             <li className="nav-item">
@@ -61,12 +61,12 @@ function Navbar() {
                 Contact Us
               </a>
             </li>
-            {/* CTA Button */}
-            <li className="nav-item ms-lg-3">
-              <a className="btn btn-primary" href="#get-started">
-                Get Started
-              </a>
-            </li>
+            {/*/!* CTA Button *!/*/}
+            {/*<li className="nav-item ms-lg-3">*/}
+            {/*  <a className="btn btn-primary" href="#get-started">*/}
+            {/*    Get Started*/}
+            {/*  </a>*/}
+            {/*</li>*/}
           </ul>
         </div>
       </div>
