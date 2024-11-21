@@ -2,9 +2,10 @@
 html, body {
   max-width: 100vw;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-* {
+*:not(.navbar, .navbar *) {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,10 +21,10 @@ html, body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f0f2f5;
   min-height: 100vh;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  /*padding: 20px;*/
+  align-items: center; */
+  padding: 56px;
 }
 
 .container {
@@ -31,9 +32,16 @@ html, body {
   padding: 40px;
 }
 
+:target::before {
+  content: "";
+  display: block;
+  height: 56px; /* Height of your navbar */
+  margin-top: -56px; /* Negative value of navbar height */
+}
+
 .container-fluid {
   background-color: #ffffff;
-  padding: 40px;
+  padding: 10px;
 }
 
 .header {
@@ -118,6 +126,31 @@ section {
 @media (max-width: 576px) {
   .custom-logo {
     width: 60px; /* Adjust for mobile */
+  }
+}
+
+.navbar-brand span {
+  font-size: 1.25rem;
+}
+
+/* Adjust Nav Links Styling */
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+  .navbar-brand span {
+    font-size: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.9rem;
   }
 }
 

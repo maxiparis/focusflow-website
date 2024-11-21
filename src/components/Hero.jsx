@@ -11,7 +11,7 @@ function Hero() {
     };
 
     return (
-        <Container className="hero-section d-flex align-content-center justify-content-center" style={{ padding: '50px 0', textAlign: 'center', backgroundColor: '#f5f5f5' }}>
+        <Container id='home' className="hero-section d-flex align-content-center justify-content-center" style={{ padding: '50px 0', textAlign: 'center', backgroundColor: '#f5f5f5' }}>
             <Row className={"w-100 d-flex align-items-center"}>
                 <Col md={6} className="align-self-center mb-4 mb-md-0">
                     <Image

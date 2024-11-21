@@ -40,7 +40,7 @@ function ContactForm() {
     };
 
     return (
-        <Container className="d-flex py-5 flex-column " style={{ maxWidth: '800px'}}>
+        <Container id='contact' className="d-flex py-5 flex-column " style={{ maxWidth: '800px'}}>
             <Card>
                 <CardBody>
                     <h2 className="text-left mb-4">We want to hear you!</h2>
